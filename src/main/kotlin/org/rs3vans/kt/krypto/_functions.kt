@@ -1,10 +1,10 @@
-package org.krypto
+package org.rs3vans.kt.krypto
 
-import org.krypto.key.PasswordBasedKey
-import org.krypto.util.DEFAULT_RANDOM_BYTES_SIZE
-import org.krypto.util.decodBase64
-import org.krypto.util.encodeBase64String
-import org.krypto.util.generateRandomBytes
+import org.rs3vans.kt.krypto.key.PasswordBasedKey
+import org.rs3vans.kt.krypto.util.DEFAULT_RANDOM_BYTES_SIZE
+import org.rs3vans.kt.krypto.util.decodBase64
+import org.rs3vans.kt.krypto.util.encodeBase64String
+import org.rs3vans.kt.krypto.util.generateRandomBytes
 
 /**
  * Securely [hash][PasswordBasedKey] a password using the given salt (or a random one), returning a Base64 encoded

@@ -1,4 +1,4 @@
-package org.krypto.key
+package org.rs3vans.kt.krypto.key
 
 import javax.crypto.spec.SecretKeySpec
 

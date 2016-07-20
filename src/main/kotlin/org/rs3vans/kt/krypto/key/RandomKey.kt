@@ -1,6 +1,6 @@
-package org.krypto.key
+package org.rs3vans.kt.krypto.key
 
-import org.krypto.key.RandomKey.generate
+import org.rs3vans.kt.krypto.key.RandomKey.generate
 import java.security.SecureRandom
 import javax.crypto.KeyGenerator
 import java.security.Provider as JdkSecurityProvider

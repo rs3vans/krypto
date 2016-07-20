@@ -1,4 +1,4 @@
-package org.krypto.util
+package org.rs3vans.kt.krypto.util
 
 import java.util.*
 

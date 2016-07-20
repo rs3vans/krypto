@@ -1,6 +1,6 @@
-package org.krypto
+package org.rs3vans.kt.krypto
 
-import org.krypto.key.Key
+import org.rs3vans.kt.krypto.key.Key
 import javax.crypto.spec.IvParameterSpec
 import java.security.Provider as JdkSecurityProvider
 import javax.crypto.Cipher as JdkCipher

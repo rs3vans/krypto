@@ -1,10 +1,10 @@
-package org.krypto
+package org.rs3vans.kt.krypto
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.krypto.key.Key
-import org.krypto.util.decodBase64
-import org.krypto.util.encodeBase64String
+import org.rs3vans.kt.krypto.key.Key
+import org.rs3vans.kt.krypto.util.decodBase64
+import org.rs3vans.kt.krypto.util.encodeBase64String
 
 const val KEY = "itjy6ug21s7YAcUAC5a/+g=="
 const val MESSAGE = "Hello World!"

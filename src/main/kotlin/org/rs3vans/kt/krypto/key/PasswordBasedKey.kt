@@ -1,6 +1,6 @@
-package org.krypto.key
+package org.rs3vans.kt.krypto.key
 
-import org.krypto.util.generateRandomBytes
+import org.rs3vans.kt.krypto.util.generateRandomBytes
 import javax.crypto.SecretKey
 import javax.crypto.SecretKeyFactory
 import javax.crypto.spec.PBEKeySpec

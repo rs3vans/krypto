@@ -1,9 +1,9 @@
-package org.krypto
+package org.rs3vans.kt.krypto
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import org.krypto.key.PasswordBasedKey
-import org.krypto.key.RandomKey
+import org.rs3vans.kt.krypto.key.PasswordBasedKey
+import org.rs3vans.kt.krypto.key.RandomKey
 
 class KeyTests {
 
