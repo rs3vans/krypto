@@ -1,5 +1,6 @@
 package org.krypto.key
 
+import org.krypto.key.RandomKey.generate
 import java.security.SecureRandom
 import javax.crypto.KeyGenerator
 import java.security.Provider as JdkSecurityProvider
@@ -30,7 +31,7 @@ object RandomKey {
                  size: Int = DEFAULT_SIZE,
                  random: SecureRandom? = null,
                  provider: JdkSecurityProvider? = null,
-                 providerName: String?): Key {
+                 providerName: String? = null): Key {
         val generator = if (provider != null) {
             KeyGenerator.getInstance(algorithm, provider)
         } else if (providerName != null) {
