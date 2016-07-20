@@ -1,8 +1,11 @@
+group 'org.rs3vans.kt'
+version '1.0-SNAPSHOT'
+
 buildscript {
-    ext.kotlin_version = '1.0.2'
+    ext.kotlin_version = '1.0.3'
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
 
     dependencies {
@@ -13,7 +16,7 @@ buildscript {
 apply plugin: 'kotlin'
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
