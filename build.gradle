@@ -20,7 +20,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group 'org.rs3vans'
-version '1.0-Final'
+version '1.0.1-SNAPSHOT'
 
 repositories {
     jcenter()
