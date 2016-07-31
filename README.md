@@ -38,7 +38,7 @@ For instructions on use and examples, please check out the `krypto` [wiki](https
 You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
 
 ```groovy
-compile 'org.rs3vans:krypto:1.0-Final'
+compile 'org.rs3vans:krypto:1.0.1'
 ```
     
 ### Maven ###
@@ -48,7 +48,7 @@ You can add `krypto` to your project using Gradle by adding the following to you
 <dependency>
   <groupId>org.rs3vans</groupId>
   <artifactId>krypto</artifactId>
-  <version>1.0-Final</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
