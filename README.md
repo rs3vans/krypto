@@ -1,4 +1,4 @@
-# krypto [![Travis](https://img.shields.io/travis/rs3vans/krypto.svg)](https://travis-ci.org/rs3vans/krypto) #
+# krypto [![Travis](https://img.shields.io/travis/rs3vans/krypto.svg)](https://travis-ci.org/rs3vans/krypto) [![Bintray](https://img.shields.io/bintray/v/rs3vans/maven/krypto.svg)](https://bintray.com/rs3vans/maven/krypto) #
 A [Kotlin](https://kotlinlang.org/) library for strong, two-way encryption.
 
 ## Overview
@@ -32,6 +32,25 @@ For instructions on use and examples, please check out the `krypto` [wiki](https
 
 ## Download ##
 `krypto` source can be downloaded from [GitHub](https://github.com/rs3vans/krypto).
+`krypto` binaries can be downloaded from [Bintray](https://bintray.com/rs3vans/maven/krypto).
+
+### Gradle ###
+You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
+
+```groovy
+compile 'org.rs3vans:krypto:1.0.1'
+```
+    
+### Maven ###
+You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
+
+```xml
+<dependency>
+  <groupId>org.rs3vans</groupId>
+  <artifactId>krypto</artifactId>
+  <version>1.0.1</version>
+</dependency>
+```
 
 ## License
 `krypto` is licensed under the Apache Software License v2.0.
