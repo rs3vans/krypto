@@ -22,6 +22,11 @@ by using this library you agree that you take on the responsibility of understan
 it enables.
 _The author(s) of `krypto` are not responsible for any loss or leakage of data, sensitive or otherwise._
 
+## Prerequisites ##
+* `krypto` requires JDK 8 or higher.
+* `krypto` is tested on Kotlin version 1.0.3
+* Use of _strong_ keys for encryption may require the installation of the [JCE Unlimited Strength Jurisdiction Policy](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) files.
+
 ## Use ##
 For instructions on use and examples, please check out the `krypto` [wiki](https://github.com/rs3vans/krypto/wiki).
 
