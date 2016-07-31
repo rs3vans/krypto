@@ -1,4 +1,4 @@
-# krypto
+# krypto [![Travis](https://img.shields.io/travis/rs3vans/krypto.svg)](https://travis-ci.org/rs3vans/krypto) #
 A [Kotlin](https://kotlinlang.org/) library for strong, two-way encryption.
 
 ## Overview
