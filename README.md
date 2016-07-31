@@ -34,5 +34,23 @@ For instructions on use and examples, please check out the `krypto` [wiki](https
 `krypto` source can be downloaded from [GitHub](https://github.com/rs3vans/krypto).
 `krypto` binaries can be downloaded from [Bintray](https://bintray.com/rs3vans/maven/krypto).
 
+### Gradle ###
+You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
+
+```groovy
+compile 'org.rs3vans:krypto:1.0-Final'
+```
+    
+### Maven ###
+You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
+
+```xml
+<dependency>
+  <groupId>org.rs3vans</groupId>
+  <artifactId>krypto</artifactId>
+  <version>1.0-Final</version>
+</dependency>
+```
+
 ## License
 `krypto` is licensed under the Apache Software License v2.0.
