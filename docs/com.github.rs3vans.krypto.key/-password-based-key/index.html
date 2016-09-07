@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<title>PasswordBasedKey - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto.key</a>&nbsp;/&nbsp;<a href=".">PasswordBasedKey</a><br/>
+<br/>
+<h1>PasswordBasedKey</h1>
+<code><span class="keyword">class </span><span class="identifier">PasswordBasedKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-key/index.html"><span class="identifier">Key</span></a></code>
+<p>PasswordBasedKey represents a <a href="../-key/index.html">Key</a> which is
+<a href="https://en.wikipedia.org/wiki/Key_derivation_function">derived from a password</a>.</p>
+<p>This implementation uses <a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> with a <a href="salt.html">salt</a> and number of <a href="iterations.html">iterations</a>.</p>
+<p>Additionally, a <a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html">security provider</a> can be provided for use in deriving the key.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">PasswordBasedKey</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/derivationAlgorithm">derivationAlgorithm</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_DERIVATION_ALGORITHM<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/salt">salt</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span>&nbsp;<span class="symbol">=</span>&nbsp;generateRandomBytes()<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/iterations">iterations</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ITERATIONS<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/keyLength">keyLength</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_KEY_LENGTH<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.key.PasswordBasedKey$<init>(kotlin.CharArray, kotlin.String, kotlin.ByteArray, kotlin.Int, kotlin.Int, java.security.Provider, kotlin.String)/providerName">providerName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>PasswordBasedKey represents a <a href="../-key/index.html">Key</a> which is
+<a href="https://en.wikipedia.org/wiki/Key_derivation_function">derived from a password</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="derivation-algorithm.html">derivationAlgorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">derivationAlgorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="iterations.html">iterations</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">iterations</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="key-length.html">keyLength</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keyLength</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider.html">provider</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider-name.html">providerName</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">providerName</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="salt.html">salt</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">salt</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-key/algorithm.html">algorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">algorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-key/bytes.html">bytes</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bytes</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-key/jdk-secret-key.html">jdkSecretKey</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">jdkSecretKey</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-d-e-r-i-v-a-t-i-o-n_-a-l-g-o-r-i-t-h-m.html">DEFAULT_DERIVATION_ALGORITHM</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_DERIVATION_ALGORITHM</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default <a href="derivation-algorithm.html">derivation algorithm</a> used when none is specified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-i-t-e-r-a-t-i-o-n-s.html">DEFAULT_ITERATIONS</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_ITERATIONS</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>The default number of <a href="iterations.html">iterations</a> used when none is specified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-k-e-y_-l-e-n-g-t-h.html">DEFAULT_KEY_LENGTH</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_KEY_LENGTH</span><span class="symbol">: </span><span class="identifier">Int</span></code>
+<p>The default <a href="key-length.html">key length</a> used when none is specified.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<title>Key - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">org.rs3vans.kt.krypto.key</a>&nbsp;/&nbsp;<a href=".">Key</a><br/>
+<br/>
+<h1>Key</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Key</span></code>
+<p>Key is the base type which represents a key used for encryption/decryption.</p>
+<p>Every Key has an <a href="algorithm.html">algorithm</a> (format), and can be exported as an <a href="bytes.html">array of bytes</a>.</p>
+<p><strong>See Also</strong><br/>
+<p><a href="#">org.krypto.Cipher</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">Key</span><span class="symbol">(</span><span class="identifier" id="Key$<init>(kotlin.ByteArray, kotlin.String)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="Key$<init>(kotlin.ByteArray, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALGORITHM<span class="symbol">)</span></code>
+<p>Construct a Key from an existing <a href="-init-.html#Key$<init>(kotlin.ByteArray, kotlin.String)/bytes">byte source</a>, optionally specifying the <a href="-init-.html#Key$<init>(kotlin.ByteArray, kotlin.String)/algorithm">algorithm</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="algorithm.html">algorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">algorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="bytes.html">bytes</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">bytes</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="jdk-secret-key.html">jdkSecretKey</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">jdkSecretKey</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-a-l-g-o-r-i-t-h-m.html">DEFAULT_ALGORITHM</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_ALGORITHM</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>This is the defailt <a href="algorithm.html">algorithm</a> used for creating a Key from a <a href="#">ByteArray</a> (when none is specified).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-password-based-key/index.html">PasswordBasedKey</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">PasswordBasedKey</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Key</span></code>
+<p><a href="../-password-based-key/index.html">PasswordBasedKey</a> represents a Key which is
+<a href="https://en.wikipedia.org/wiki/Key_derivation_function">derived from a password</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

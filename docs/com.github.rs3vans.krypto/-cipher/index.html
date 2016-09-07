@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<title>Cipher - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">Cipher</a><br/>
+<br/>
+<h1>Cipher</h1>
+<code><span class="keyword">class </span><span class="identifier">Cipher</span></code>
+<p>A Cipher is used to <a href="encrypt.html">encrypt</a> and <a href="#">decrypt</a><a href="#">ByteArray</a> data using...</p>
+<ul><li>a <a href="../../com.github.rs3vans.krypto.key/-key/index.html">Key</a></li>
+<li>an <a href="algorithm.html">algorithm</a></li>
+<li>a <a href="mode.html">block cipher mode</a> (see <a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">here</a>)</li>
+<li>a <a href="padding.html">padding mode</a> (see <a href="https://en.wikipedia.org/wiki/Padding_(cryptography)">here</a></li>
+<li>optionally a <a href="provider.html">security provider</a></li>
+</ul>
+<p>Note: Encryptions are randomized using an
+<a href="https://en.wikipedia.org/wiki/Initialization_vector">initialization vector</a> (IV).</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../-encrypted/index.html">Encrypted</a></p>
+</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">Cipher</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.rs3vans.krypto.key/-key/index.html"><span class="identifier">Key</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALGORITHM<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/mode">mode</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_MODE<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/padding">padding</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_PADDING<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, kotlin.String, kotlin.String, java.security.Provider, kotlin.String)/providerName">providerName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>A Cipher is used to <a href="encrypt.html">encrypt</a> and <a href="#">decrypt</a><a href="#">ByteArray</a> data using...</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="algorithm.html">algorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">algorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="key.html">key</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../com.github.rs3vans.krypto.key/-key/index.html"><span class="identifier">Key</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="key-algorithm.html">keyAlgorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keyAlgorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="mode.html">mode</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">mode</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="padding.html">padding</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">padding</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider.html">provider</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider-name.html">providerName</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">providerName</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="decrypt.html">decrypt</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$decrypt(com.github.rs3vans.krypto.Encrypted)/encrypted">encrypted</span><span class="symbol">:</span>&nbsp;<a href="../-encrypted/index.html"><span class="identifier">Encrypted</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Decrypt the <a href="decrypt.html#com.github.rs3vans.krypto.Cipher$decrypt(com.github.rs3vans.krypto.Encrypted)/encrypted">data</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="encrypt.html">encrypt</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">encrypt</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$encrypt(kotlin.ByteArray, kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.Cipher$encrypt(kotlin.ByteArray, kotlin.ByteArray)/iv">iv</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="../-encrypted/index.html"><span class="identifier">Encrypted</span></a></code>
+<p>Encrypt the <a href="encrypt.html#com.github.rs3vans.krypto.Cipher$encrypt(kotlin.ByteArray, kotlin.ByteArray)/data">data</a>, optionally giving an <a href="encrypt.html#com.github.rs3vans.krypto.Cipher$encrypt(kotlin.ByteArray, kotlin.ByteArray)/iv">initialization vector</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-a-l-g-o-r-i-t-h-m.html">DEFAULT_ALGORITHM</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_ALGORITHM</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default algorithm used for encryption.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-m-o-d-e.html">DEFAULT_MODE</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_MODE</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default block cipher mode.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-p-a-d-d-i-n-g.html">DEFAULT_PADDING</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_PADDING</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default padding mode.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

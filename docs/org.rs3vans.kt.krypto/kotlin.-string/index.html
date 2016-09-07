@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<title>org.rs3vans.kt.krypto.kotlin.String - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">org.rs3vans.kt.krypto</a>&nbsp;/&nbsp;<a href=".">kotlin.String</a><br/>
+<br/>
+<h3>Extensions for kotlin.String</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="hash-password.html">hashPassword</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">String</span><span class="symbol">.</span><span class="identifier">hashPassword</span><span class="symbol">(</span><span class="identifier" id="org.rs3vans.kt.krypto$hashPassword(kotlin.String, kotlin.ByteArray)/salt">salt</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span>&nbsp;<span class="symbol">=</span>&nbsp;generateRandomBytes()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Securely <a href="../../org.rs3vans.kt.krypto.key/-password-based-key/index.html">hash</a> a password using the given salt (or a random one), returning a Base64 encoded
+<a href="#">String</a> containing both the hash and then the salt.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="matches-password-hash.html">matchesPasswordHash</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">String</span><span class="symbol">.</span><span class="identifier">matchesPasswordHash</span><span class="symbol">(</span><span class="identifier" id="org.rs3vans.kt.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="org.rs3vans.kt.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks to see if the given <a href="matches-password-hash.html#org.rs3vans.kt.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</a> value matches the hashing of this string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
