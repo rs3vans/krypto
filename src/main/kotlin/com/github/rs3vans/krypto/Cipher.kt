@@ -1,6 +1,6 @@
-package org.rs3vans.kt.krypto
+package com.github.rs3vans.krypto
 
-import org.rs3vans.kt.krypto.key.Key
+import com.github.rs3vans.krypto.key.Key
 import javax.crypto.spec.IvParameterSpec
 import java.security.Provider as JdkSecurityProvider
 import javax.crypto.Cipher as JdkCipher
@@ -22,24 +22,24 @@ class Cipher(val key: Key,
              val algorithm: String = DEFAULT_ALGORITHM,
              val mode: String = DEFAULT_MODE,
              val padding: String = DEFAULT_PADDING,
-             val provider: JdkSecurityProvider? = null,
+             val provider: java.security.Provider? = null,
              val providerName: String? = null) {
 
     val keyAlgorithm: String
         get() = key.algorithm
 
-    private val jdkEncryptCipher: JdkCipher
-    private val jdkDecryptCipher: JdkCipher
+    private val jdkEncryptCipher: javax.crypto.Cipher
+    private val jdkDecryptCipher: javax.crypto.Cipher
 
     init {
         val jdkCipherAlgorithm = "$algorithm/$mode/$padding"
 
         fun createJdkCipher() = if (provider != null) {
-            JdkCipher.getInstance(jdkCipherAlgorithm, provider)
+            javax.crypto.Cipher.getInstance(jdkCipherAlgorithm, provider)
         } else if (providerName != null) {
-            JdkCipher.getInstance(jdkCipherAlgorithm, providerName)
+            javax.crypto.Cipher.getInstance(jdkCipherAlgorithm, providerName)
         } else {
-            JdkCipher.getInstance(jdkCipherAlgorithm)
+            javax.crypto.Cipher.getInstance(jdkCipherAlgorithm)
         }
 
         jdkEncryptCipher = createJdkCipher()
@@ -55,9 +55,9 @@ class Cipher(val key: Key,
         return with(jdkEncryptCipher) {
             synchronized(this) {
                 if (iv == null) {
-                    init(JdkCipher.ENCRYPT_MODE, key.jdkSecretKey)
+                    init(javax.crypto.Cipher.ENCRYPT_MODE, key.jdkSecretKey)
                 } else {
-                    init(JdkCipher.ENCRYPT_MODE, key.jdkSecretKey, IvParameterSpec(iv))
+                    init(javax.crypto.Cipher.ENCRYPT_MODE, key.jdkSecretKey, IvParameterSpec(iv))
                 }
                 Encrypted(doFinal(data), this.iv)
             }
@@ -72,7 +72,7 @@ class Cipher(val key: Key,
     fun decrypt(encrypted: Encrypted): ByteArray {
         return with(jdkDecryptCipher) {
             synchronized(this) {
-                init(JdkCipher.DECRYPT_MODE, key.jdkSecretKey, IvParameterSpec(encrypted.iv))
+                init(javax.crypto.Cipher.DECRYPT_MODE, key.jdkSecretKey, IvParameterSpec(encrypted.iv))
                 doFinal(encrypted.bytes, 0, encrypted.bytes.size)
             }
         }

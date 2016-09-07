@@ -1,4 +1,4 @@
-package org.rs3vans.kt.krypto.util
+package com.github.rs3vans.krypto.util
 
 import java.security.SecureRandom
 

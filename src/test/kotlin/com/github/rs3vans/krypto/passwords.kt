@@ -1,4 +1,4 @@
-package org.rs3vans.kt.krypto
+package com.github.rs3vans.krypto
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue

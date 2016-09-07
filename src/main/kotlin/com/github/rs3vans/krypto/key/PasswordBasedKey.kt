@@ -1,6 +1,7 @@
-package org.rs3vans.kt.krypto.key
+package com.github.rs3vans.krypto.key
 
-import org.rs3vans.kt.krypto.util.generateRandomBytes
+import com.github.rs3vans.krypto.util.generateRandomBytes
+import com.github.rs3vans.krypto.util.generateRandomBytes
 import javax.crypto.SecretKey
 import javax.crypto.SecretKeyFactory
 import javax.crypto.spec.PBEKeySpec
@@ -20,7 +21,7 @@ class PasswordBasedKey(password: CharArray,
                        val salt: ByteArray = generateRandomBytes(),
                        val iterations: Int = DEFAULT_ITERATIONS,
                        val keyLength: Int = DEFAULT_KEY_LENGTH,
-                       val provider: JdkSecurityProvider? = null,
+                       val provider: java.security.Provider? = null,
                        val providerName: String? = null) :
         Key(generateSecretKey(password, derivationAlgorithm, salt, iterations, keyLength, provider, providerName)) {
 
@@ -46,7 +47,7 @@ class PasswordBasedKey(password: CharArray,
                                       salt: ByteArray,
                                       iterations: Int,
                                       keyLength: Int,
-                                      provider: JdkSecurityProvider?,
+                                      provider: java.security.Provider?,
                                       providerName: String?): SecretKey {
             val algorithm = "PBKDF2With$derivationAlgorithm"
             val factory = if (provider != null) {

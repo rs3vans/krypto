@@ -1,6 +1,6 @@
-package org.rs3vans.kt.krypto.key
+package com.github.rs3vans.krypto.key
 
-import org.rs3vans.kt.krypto.key.RandomKey.generate
+import com.github.rs3vans.krypto.key.RandomKey.generate
 import java.security.SecureRandom
 import javax.crypto.KeyGenerator
 import java.security.Provider as JdkSecurityProvider
@@ -30,7 +30,7 @@ object RandomKey {
     fun generate(algorithm: String = DEFAULT_ALGORITHM,
                  size: Int = DEFAULT_SIZE,
                  random: SecureRandom? = null,
-                 provider: JdkSecurityProvider? = null,
+                 provider: java.security.Provider? = null,
                  providerName: String? = null): Key {
         val generator = if (provider != null) {
             KeyGenerator.getInstance(algorithm, provider)

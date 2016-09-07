@@ -1,5 +1,6 @@
-package org.rs3vans.kt.krypto.key
+package com.github.rs3vans.krypto.key
 
+import javax.crypto.SecretKey
 import javax.crypto.spec.SecretKeySpec
 
 /**
@@ -9,7 +10,7 @@ import javax.crypto.spec.SecretKeySpec
  *
  * @see org.krypto.Cipher
  */
-open class Key internal constructor(val jdkSecretKey: javax.crypto.SecretKey) {
+open class Key internal constructor(val jdkSecretKey: SecretKey) {
 
     /**
      * Construct a [Key] from an existing [byte source][bytes], optionally specifying the [algorithm].
