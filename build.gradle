@@ -19,8 +19,8 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-group 'org.rs3vans'
-version '1.0.1'
+group 'com.github.rs3vans.krypto'
+version '1.0.2'
 
 repositories {
     jcenter()
@@ -33,27 +33,22 @@ dependencies {
 }
 
 dokka {
-    moduleName = 'krypto'
-    outputFormat = 'javadoc'
-    outputDirectory = "$buildDir/javadoc"
-    processConfigurations = ['compile']
     linkMapping {
         dir = 'src/main/kotlin'
-        url = 'https://github.com/cy6erGn0m/vertx3-lang-kotlin/blob/master/src/main/kotlin'
+        url = 'https://github.com/rs3vans/krypto/master/tree/src/main/kotlin'
         suffix = '#L'
     }
-    sourceDirs = files('src/main/kotlin')
 }
 
 bintray {
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
     key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-    configurations = ['archives']
+    publications = ['KryptoPublication']
     pkg {
         repo = 'maven'
         name = 'krypto'
         userOrg = user
-        licenses = ['Apache-2.0']
+        licenses = ['MIT']
         vcsUrl = 'https://github.com/rs3vans/krypto.git'
         version {
             name = project.version
@@ -61,6 +56,11 @@ bintray {
             vcsTag = project.version
         }
     }
+}
+
+task dokkaDoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = 'html'
+    outputDirectory = "docs"
 }
 
 task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
@@ -80,4 +80,19 @@ task dokkaJar(type: Jar, dependsOn: dokkaJavadoc) {
 
 artifacts {
     archives sourcesJar, dokkaJar
+}
+
+assemble.dependsOn dokkaDoc
+
+publishing {
+    publications {
+        KryptoPublication(MavenPublication) {
+            from components.java
+            groupId 'com.github.rs3vans.krypto'
+            artifactId 'krypto'
+            version project.version
+            artifact sourcesJar
+            artifact dokkaJar
+        }
+    }
 }
