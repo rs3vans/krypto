@@ -1,6 +1,7 @@
 buildscript {
-    ext.kotlin_version = '1.0.3'
-    ext.dokka_version = '0.9.9'
+    ext.kotlin_version = '1.0.5-2'
+    ext.dokka_version = '0.9.10'
+    ext.bintray_version = '1.7.3'
 
     repositories {
         jcenter()
@@ -8,8 +9,8 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray_version"
     }
 }
 

@@ -1,5 +1,6 @@
 <HTML>
 <HEAD>
+<meta charset="UTF-8">
 <title>com.github.rs3vans.krypto.kotlin.String - </title>
 <link rel="stylesheet" href="../../style.css">
 </HEAD>
@@ -15,7 +16,7 @@
 <td>
 <code><span class="keyword">fun </span><span class="identifier">String</span><span class="symbol">.</span><span class="identifier">hashPassword</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$hashPassword(kotlin.String, kotlin.ByteArray)/salt">salt</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span>&nbsp;<span class="symbol">=</span>&nbsp;generateRandomBytes()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
 <p>Securely <a href="../../com.github.rs3vans.krypto.key/-password-based-key/index.html">hash</a> a password using the given salt (or a random one), returning a Base64 encoded
-<a href="#">String</a> containing both the hash and then the salt.</p>
+<a href="#">String</a> with an embedded salt.</p>
 </td>
 </tr>
 <tr>
@@ -23,7 +24,7 @@
 <a href="matches-password-hash.html">matchesPasswordHash</a></td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">String</span><span class="symbol">.</span><span class="identifier">matchesPasswordHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
-<p>Checks to see if the given <a href="matches-password-hash.html#com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</a> value matches the hashing of this string.</p>
+<p>Checks to see if the given <a href="matches-password-hash.html#com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</a> value matches the (re)hashing of this string.</p>
 </td>
 </tr>
 </tbody>

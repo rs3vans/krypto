@@ -1,5 +1,6 @@
 <HTML>
 <HEAD>
+<meta charset="UTF-8">
 <title>com.github.rs3vans.krypto - </title>
 <link rel="stylesheet" href="../style.css">
 </HEAD>
@@ -7,27 +8,6 @@
 <a href=".">com.github.rs3vans.krypto</a><br/>
 <br/>
 <h2>Package com.github.rs3vans.krypto</h2>
-<h3>Types</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<a href="-cipher/index.html">Cipher</a></td>
-<td>
-<code><span class="keyword">class </span><span class="identifier">Cipher</span></code>
-<p>A <a href="-cipher/index.html">Cipher</a> is used to <a href="-cipher/encrypt.html">encrypt</a> and <a href="#">decrypt</a><a href="#">ByteArray</a> data using...</p>
-</td>
-</tr>
-<tr>
-<td>
-<a href="-encrypted/index.html">Encrypted</a></td>
-<td>
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Encrypted</span></code>
-<p>Represents an encrypted output from a <a href="-cipher/index.html">Cipher</a>.</p>
-</td>
-</tr>
-</tbody>
-</table>
 <h3>Extensions for External Classes</h3>
 <table>
 <tbody>
@@ -35,6 +15,29 @@
 <td>
 <a href="kotlin.-string/index.html">kotlin.String</a></td>
 <td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="extract-data-from-hash.html">extractDataFromHash</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">extractDataFromHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Taking a Base64-encoded <a href="extract-data-from-hash.html#com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/hash">hash</a> with an embedded salt and a <a href="extract-data-from-hash.html#com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/saltSize">salt size</a>, extract and return the
+<a href="#">data bytes</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="extract-salt-from-hash.html">extractSaltFromHash</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">extractSaltFromHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
+<p>Taking a Base64-encoded <a href="extract-salt-from-hash.html#com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/hash">hash</a> with an embedded salt and a <a href="extract-salt-from-hash.html#com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/saltSize">salt size</a>, extract and return the
+<a href="#">salt bytes</a>.</p>
 </td>
 </tr>
 </tbody>

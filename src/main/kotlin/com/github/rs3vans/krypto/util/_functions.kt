@@ -28,4 +28,4 @@ fun ByteArray.decodeBase64(): ByteArray = Base64.getDecoder().decode(this)
 /**
  * Decode a [Base64-encoded](https://en.wikipedia.org/wiki/Base64) [String].
  */
-fun String.decodBase64(): ByteArray = Base64.getDecoder().decode(this)
+fun String.decodeBase64(): ByteArray = Base64.getDecoder().decode(this)

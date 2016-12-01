@@ -1,4 +1,4 @@
-package com.github.rs3vans.krypto
+package com.github.rs3vans.krypto.encrypt
 
 import java.util.*
 

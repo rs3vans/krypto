@@ -1,4 +1,4 @@
-package com.github.rs3vans.krypto
+package com.github.rs3vans.krypto.encrypt
 
 import com.github.rs3vans.krypto.key.Key
 import javax.crypto.spec.IvParameterSpec
@@ -22,7 +22,7 @@ class Cipher(val key: Key,
              val algorithm: String = DEFAULT_ALGORITHM,
              val mode: String = DEFAULT_MODE,
              val padding: String = DEFAULT_PADDING,
-             val provider: java.security.Provider? = null,
+             val provider: JdkSecurityProvider? = null,
              val providerName: String? = null) {
 
     val keyAlgorithm: String

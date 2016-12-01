@@ -26,7 +26,7 @@ open class Key internal constructor(val jdkSecretKey: SecretKey) {
     companion object {
 
         /**
-         * This is the defailt [algorithm] used for creating a [Key] from a [ByteArray] (when none is specified).
+         * This is the default [algorithm] used for creating a [Key] from a [ByteArray] (when none is specified).
          */
         const val DEFAULT_ALGORITHM = "AES"
     }

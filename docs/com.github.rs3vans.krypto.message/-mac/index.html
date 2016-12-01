@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Mac - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto.message</a>&nbsp;/&nbsp;<a href=".">Mac</a><br/>
+<br/>
+<h1>Mac</h1>
+<code><span class="keyword">class </span><span class="identifier">Mac</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A Mac is an object used to create a
+<a href="https//en.wikipedia.org/wiki/Message_authentication_code">message authentication code</a>, which is used to
+authenticate a piece of data (message) in both authenticity and integrity.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">Mac</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.message.Mac$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, java.security.Provider, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.rs3vans.krypto.key/-key/index.html"><span class="identifier">Key</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.message.Mac$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, java.security.Provider, kotlin.String)/algorithm">algorithm</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_ALGORITHM<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.message.Mac$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, java.security.Provider, kotlin.String)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.message.Mac$<init>(com.github.rs3vans.krypto.key.Key, kotlin.String, java.security.Provider, kotlin.String)/providerName">providerName</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span></code>
+<p>A Mac is an object used to create a
+<a href="https//en.wikipedia.org/wiki/Message_authentication_code">message authentication code</a>, which is used to
+authenticate a piece of data (message) in both authenticity and integrity.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="algorithm.html">algorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">algorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="key.html">key</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="../../com.github.rs3vans.krypto.key/-key/index.html"><span class="identifier">Key</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="key-algorithm.html">keyAlgorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">keyAlgorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider.html">provider</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/Provider.html"><span class="identifier">Provider</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider-name.html">providerName</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">providerName</span><span class="symbol">: </span><span class="identifier">String</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="create.html">create</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.message.Mac$create(kotlin.ByteArray)/data">data</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-a-l-g-o-r-i-t-h-m.html">DEFAULT_ALGORITHM</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_ALGORITHM</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>The default algorithm used for signing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
