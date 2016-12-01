@@ -24,7 +24,7 @@ _The author(s) of `krypto` are not responsible for any loss or leakage of data, 
 
 ## Prerequisites ##
 * `krypto` requires JDK 8 or higher.
-* `krypto` is tested on Kotlin version 1.0.3
+* `krypto` is tested on Kotlin version 1.0.5-2
 * Use of _strong_ keys for encryption may require the installation of the [JCE Unlimited Strength Jurisdiction Policy](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) files.
 
 ## Use ##
@@ -40,7 +40,7 @@ Additionally, please read the [API reference documentation](https://rs3vans.gith
 You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
 
 ```groovy
-compile 'com.github.rs3vans.krypto:krypto:1.0.2'
+compile 'com.github.rs3vans.krypto:krypto:1.1.0'
 ```
     
 ### Maven ###
@@ -50,7 +50,7 @@ You can add `krypto` to your project using Gradle by adding the following to you
 <dependency>
   <groupId>com.github.rs3vans.krypto</groupId>
   <artifactId>krypto</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
