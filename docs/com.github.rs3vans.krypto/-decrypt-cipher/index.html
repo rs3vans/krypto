@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DecryptCipher - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">DecryptCipher</a><br/>
+<br/>
+<h1>DecryptCipher</h1>
+<code><span class="keyword">interface </span><span class="identifier">DecryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A contract for a cipher that can <a href="decrypt.html">decrypt</a> an instance of <a href="../-encrypted/index.html">Encrypted</a>, producing an instance of <a href="../-decrypted/index.html">Decrypted</a>.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="decrypt.html">decrypt</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.DecryptCipher$decrypt(com.github.rs3vans.krypto.Encrypted)/encrypted">encrypted</span><span class="symbol">:</span>&nbsp;<a href="../-encrypted/index.html"><span class="identifier">Encrypted</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-decrypted/index.html"><span class="identifier">Decrypted</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-asymmetric-cipher-pair/index.html">AsymmetricCipherPair</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricCipherPair</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><span class="identifier">DecryptCipher</span></code>
+<p>An <a href="../-encrypt-cipher/index.html">encrypting</a>/decrypting cipher which wraps both an <a href="../-asymmetric-encrypt-cipher/index.html">AsymmetricEncryptCipher</a> and
+a <a href="../-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricDecryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><span class="identifier">DecryptCipher</span></code>
+<p>An decrypting-only cipher which uses an RSA-based <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">PrivateKey</a> for decryption.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-authenticating-block-cipher/index.html">AuthenticatingBlockCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AuthenticatingBlockCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="../-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><span class="identifier">DecryptCipher</span></code>
+<p>An <a href="../-encrypt-cipher/index.html">encrypting</a>/decrypting cipher which uses the Galois-counter mode (GCM).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../-block-cipher/index.html">BlockCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BlockCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="../-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><span class="identifier">DecryptCipher</span></code>
+<p>An <a href="../-encrypt-cipher/index.html">encrypting</a>/decrypting cipher which uses the chained-block mode (CBC).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

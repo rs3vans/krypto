@@ -2,7 +2,7 @@
 A [Kotlin](https://kotlinlang.org/) library for strong, two-way encryption.
 
 ## Overview
-`krypto` makes strong, two-way encryption easier to deal with when developing in Kotlin.
+`krypto` makes strong, two-way encryption easier to deal with when developing in Kotlin (or Java).
 
 `krypto` is more or less a wrapper around the
 [Java Cryptography Architecture](http://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html)
@@ -40,7 +40,7 @@ Additionally, please read the [API reference documentation](https://rs3vans.gith
 You can add `krypto` to your project using Gradle by adding the following to your `build.gradle` dependencies:
 
 ```groovy
-compile 'com.github.rs3vans.krypto:krypto:1.1.0'
+compile 'com.github.rs3vans.krypto:krypto:2.0.0'
 ```
     
 ### Maven ###
@@ -50,7 +50,7 @@ You can add `krypto` to your project using Gradle by adding the following to you
 <dependency>
   <groupId>com.github.rs3vans.krypto</groupId>
   <artifactId>krypto</artifactId>
-  <version>1.1.0</version>
+  <version>2.0.0</version>
 </dependency>
 ```
 

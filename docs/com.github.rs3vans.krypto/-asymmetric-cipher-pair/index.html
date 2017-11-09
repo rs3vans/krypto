@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsymmetricCipherPair - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">AsymmetricCipherPair</a><br/>
+<br/>
+<h1>AsymmetricCipherPair</h1>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricCipherPair</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><a href="../-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="../-encrypt-cipher/index.html">encrypting</a>/<a href="../-decrypt-cipher/index.html">decrypting</a> cipher which wraps both an <a href="../-asymmetric-encrypt-cipher/index.html">AsymmetricEncryptCipher</a> and
+a <a href="../-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a>.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">AsymmetricCipherPair</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(java.security.PublicKey, java.security.PrivateKey, com.github.rs3vans.krypto.KryptoProvider)/publicKey">publicKey</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(java.security.PublicKey, java.security.PrivateKey, com.github.rs3vans.krypto.KryptoProvider)/privateKey">privateKey</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(java.security.PublicKey, java.security.PrivateKey, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span></code><br/>
+<code><span class="identifier">AsymmetricCipherPair</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(java.security.KeyPair, com.github.rs3vans.krypto.KryptoProvider)/keyPair">keyPair</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyPair.html"><span class="identifier">KeyPair</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(java.security.KeyPair, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span></code><code><span class="identifier">AsymmetricCipherPair</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(com.github.rs3vans.krypto.AsymmetricEncryptCipher, com.github.rs3vans.krypto.AsymmetricDecryptCipher)/encryptCipher">encryptCipher</span><span class="symbol">:</span>&nbsp;<a href="../-asymmetric-encrypt-cipher/index.html"><span class="identifier">AsymmetricEncryptCipher</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricCipherPair$<init>(com.github.rs3vans.krypto.AsymmetricEncryptCipher, com.github.rs3vans.krypto.AsymmetricDecryptCipher)/decryptCipher">decryptCipher</span><span class="symbol">:</span>&nbsp;<a href="../-asymmetric-decrypt-cipher/index.html"><span class="identifier">AsymmetricDecryptCipher</span></a><span class="symbol">)</span></code>
+<p>An <a href="../-encrypt-cipher/index.html">encrypting</a>/<a href="../-decrypt-cipher/index.html">decrypting</a> cipher which wraps both an <a href="../-asymmetric-encrypt-cipher/index.html">AsymmetricEncryptCipher</a> and
+a <a href="../-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="decrypt-cipher.html">decryptCipher</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">decryptCipher</span><span class="symbol">: </span><a href="../-asymmetric-decrypt-cipher/index.html"><span class="identifier">AsymmetricDecryptCipher</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="encrypt-cipher.html">encryptCipher</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">encryptCipher</span><span class="symbol">: </span><a href="../-asymmetric-encrypt-cipher/index.html"><span class="identifier">AsymmetricEncryptCipher</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

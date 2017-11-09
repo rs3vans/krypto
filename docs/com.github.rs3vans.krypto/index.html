@@ -8,12 +8,192 @@
 <a href=".">com.github.rs3vans.krypto</a><br/>
 <br/>
 <h2>Package com.github.rs3vans.krypto</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-asymmetric-cipher-pair/index.html">AsymmetricCipherPair</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricCipherPair</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><a href="-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="-encrypt-cipher/index.html">encrypting</a>/<a href="-decrypt-cipher/index.html">decrypting</a> cipher which wraps both an <a href="-asymmetric-encrypt-cipher/index.html">AsymmetricEncryptCipher</a> and
+a <a href="-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-asymmetric-decrypt-cipher/index.html">AsymmetricDecryptCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricDecryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="-decrypt-cipher/index.html">decrypting-only</a> cipher which uses an RSA-based <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">PrivateKey</a> for decryption.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-asymmetric-encrypt-cipher/index.html">AsymmetricEncryptCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricEncryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a></code>
+<p>An <a href="-encrypt-cipher/index.html">encrypting-only</a> cipher which uses an RSA-based <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html">PublicKey</a> for encryption.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-authenticating-block-cipher/index.html">AuthenticatingBlockCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AuthenticatingBlockCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><a href="-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="-encrypt-cipher/index.html">encrypting</a>/<a href="-decrypt-cipher/index.html">decrypting</a> cipher which uses the Galois-counter mode (GCM).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-block-cipher/index.html">BlockCipher</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">BlockCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="-encrypt-cipher/index.html"><span class="identifier">EncryptCipher</span></a><span class="symbol">, </span><a href="-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="-encrypt-cipher/index.html">encrypting</a>/<a href="-decrypt-cipher/index.html">decrypting</a> cipher which uses the chained-block mode (CBC).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-bytes/index.html">Bytes</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Bytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A class that wraps a <a href="#">ByteArray</a>, providing ease-of-use and additional functionality.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-concrete-cipher/index.html">ConcreteCipher</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">ConcreteCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A simple base class that defines a cipher which wraps an instance <a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/Cipher.html">Cipher</a> along with a <a href="http://docs.oracle.com/javase/6/docs/api/java/security/Key.html">Key</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-decrypt-cipher/index.html">DecryptCipher</a></td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DecryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A contract for a cipher that can <a href="-decrypt-cipher/decrypt.html">decrypt</a> an instance of <a href="-encrypted/index.html">Encrypted</a>, producing an instance of <a href="-decrypted/index.html">Decrypted</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-decrypted/index.html">Decrypted</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Decrypted</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Represents data that is <emph>not</emph> encrypted (and may have been the result of a <a href="-decrypt-cipher/decrypt.html">decryption</a>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-digest-builder/index.html">DigestBuilder</a></td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">DigestBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A builder-style contract for digesting a message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-digester/index.html">Digester</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">Digester</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A base class which describes an object that can one-way digest a message (some data).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-encrypt-cipher/index.html">EncryptCipher</a></td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">EncryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A contract for a cipher that can <a href="-encrypt-cipher/encrypt.html">encrypt</a> an instance of <a href="-decrypted/index.html">Decrypted</a>, producing an instance of <a href="-encrypted/index.html">Encrypted</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-encrypted/index.html">Encrypted</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Encrypted</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Represents data that <emph>is</emph> encrypted (and may have been the result of an <a href="-encrypt-cipher/encrypt.html">encryption</a>).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-hash-algorithms/index.html">HashAlgorithms</a></td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">HashAlgorithms</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Some common algorithms used when creating a one-way hash digest.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-hash-digester/index.html">HashDigester</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HashDigester</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-digester/index.html"><span class="identifier">Digester</span></a></code>
+<p>A <a href="-digester/index.html">Digester</a> implementation that uses a straight-forward hash.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-hmac-algorithms/index.html">HmacAlgorithms</a></td>
+<td>
+<code><span class="keyword">object </span><span class="identifier">HmacAlgorithms</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>Some common algorithms used when creating an HMAC digest.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-hmac-digester/index.html">HmacDigester</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">HmacDigester</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-digester/index.html"><span class="identifier">Digester</span></a></code>
+<p>A <a href="-digester/index.html">Digester</a> implementation which uses HMAC.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-krypto-provider/index.html">KryptoProvider</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">KryptoProvider</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A class that encapsulates a JCE provider.</p>
+</td>
+</tr>
+</tbody>
+</table>
 <h3>Extensions for External Classes</h3>
 <table>
 <tbody>
 <tr>
 <td>
-<a href="kotlin.-string/index.html">kotlin.String</a></td>
+<a href="java.io.-input-stream/index.html">java.io.InputStream</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="java.io.-serializable/index.html">java.io.Serializable</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="java.nio.-byte-buffer/index.html">java.nio.ByteBuffer</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="java.security.-key/index.html">java.security.Key</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="kotlin.-byte-array/index.html">kotlin.ByteArray</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="kotlin.-char-sequence/index.html">kotlin.CharSequence</a></td>
 <td>
 </td>
 </tr>
@@ -24,20 +204,75 @@
 <tbody>
 <tr>
 <td>
-<a href="extract-data-from-hash.html">extractDataFromHash</a></td>
+<a href="derive-aes-key-from-password.html">deriveAesKeyFromPassword</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">extractDataFromHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
-<p>Taking a Base64-encoded <a href="extract-data-from-hash.html#com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/hash">hash</a> with an embedded salt and a <a href="extract-data-from-hash.html#com.github.rs3vans.krypto$extractDataFromHash(kotlin.String, kotlin.Int)/saltSize">salt size</a>, extract and return the
-<a href="#">data bytes</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">deriveAesKeyFromPassword</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$deriveAesKeyFromPassword(kotlin.CharArray, com.github.rs3vans.krypto.Bytes, kotlin.Int, com.github.rs3vans.krypto.KryptoProvider)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">CharArray</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$deriveAesKeyFromPassword(kotlin.CharArray, com.github.rs3vans.krypto.Bytes, kotlin.Int, com.github.rs3vans.krypto.KryptoProvider)/salt">salt</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$deriveAesKeyFromPassword(kotlin.CharArray, com.github.rs3vans.krypto.Bytes, kotlin.Int, com.github.rs3vans.krypto.KryptoProvider)/iterations">iterations</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;PBE_KEY_DEFAULT_ITERATIONS<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$deriveAesKeyFromPassword(kotlin.CharArray, com.github.rs3vans.krypto.Bytes, kotlin.Int, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a></code>
+<p>Derives a new AES key from the given password using a strong <a href="#">PBE-based algorithm</a>.</p>
 </td>
 </tr>
 <tr>
 <td>
-<a href="extract-salt-from-hash.html">extractSaltFromHash</a></td>
+<a href="generate-random-aes-key.html">generateRandomAesKey</a></td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">extractSaltFromHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code>
-<p>Taking a Base64-encoded <a href="extract-salt-from-hash.html#com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/hash">hash</a> with an embedded salt and a <a href="extract-salt-from-hash.html#com.github.rs3vans.krypto$extractSaltFromHash(kotlin.String, kotlin.Int)/saltSize">salt size</a>, extract and return the
-<a href="#">salt bytes</a>.</p>
+<code><span class="keyword">fun </span><span class="identifier">generateRandomAesKey</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$generateRandomAesKey(java.security.SecureRandom, com.github.rs3vans.krypto.KryptoProvider)/random">random</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/SecureRandom.html"><span class="identifier">SecureRandom</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$generateRandomAesKey(java.security.SecureRandom, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a></code>
+<p>Generates a random AES <a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html">key</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="generate-random-asymmetric-key-pair.html">generateRandomAsymmetricKeyPair</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">generateRandomAsymmetricKeyPair</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$generateRandomAsymmetricKeyPair(java.security.SecureRandom, com.github.rs3vans.krypto.KryptoProvider)/random">random</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/SecureRandom.html"><span class="identifier">SecureRandom</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$generateRandomAsymmetricKeyPair(java.security.SecureRandom, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyPair.html"><span class="identifier">KeyPair</span></a></code>
+<p>Generates a random <a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyPair.html">KeyPair</a> for asymmetric (RSA-based) encryption/decryption.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="hash-password.html">hashPassword</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashPassword</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$hashPassword(kotlin.String, com.github.rs3vans.krypto.Bytes)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$hashPassword(kotlin.String, com.github.rs3vans.krypto.Bytes)/salt">salt</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a>&nbsp;<span class="symbol">=</span>&nbsp;generateRandomBytes()<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Securely <a href="#">hash</a> a password using the given salt (or a random one), returning a Base64 encoded
+<a href="#">String</a> with an embedded salt.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="import-aes-key.html">importAesKey</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">importAesKey</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$importAesKey(com.github.rs3vans.krypto.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html"><span class="identifier">SecretKey</span></a></code>
+<p>Imports an AES <a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/SecretKey.html">key</a> from an instance of <a href="-bytes/index.html">Bytes</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="import-asymmetric-key-pair.html">importAsymmetricKeyPair</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">importAsymmetricKeyPair</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$importAsymmetricKeyPair(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/publicBytes">publicBytes</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$importAsymmetricKeyPair(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/privateBytes">privateBytes</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$importAsymmetricKeyPair(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyPair.html"><span class="identifier">KeyPair</span></a></code>
+<p>Imports <a href="#">RSA-based</a><a href="http://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html">PublicKey</a> and <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">private</a> keys as a <a href="http://docs.oracle.com/javase/6/docs/api/java/security/KeyPair.html">pair</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="import-private-key.html">importPrivateKey</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">importPrivateKey</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$importPrivateKey(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$importPrivateKey(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a></code>
+<p>Imports an <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">RSA-based private key</a> from an instance of <a href="-bytes/index.html">Bytes</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="import-public-key.html">importPublicKey</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">importPublicKey</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$importPublicKey(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$importPublicKey(com.github.rs3vans.krypto.Bytes, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html"><span class="identifier">PublicKey</span></a></code>
+<p>Imports a <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PublicKey.html">RSA-based public key</a> from an instance of <a href="-bytes/index.html">Bytes</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="matches-password-hash.html">matchesPasswordHash</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">matchesPasswordHash</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/password">password</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</span><span class="symbol">:</span>&nbsp;<span class="identifier">String</span><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/saltSize">saltSize</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Checks to see if the given <a href="matches-password-hash.html#com.github.rs3vans.krypto$matchesPasswordHash(kotlin.String, kotlin.String, kotlin.Int)/hash">hash</a> value matches the (re)hashing of this string.</p>
 </td>
 </tr>
 </tbody>
