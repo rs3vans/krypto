@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AsymmetricDecryptCipher - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">AsymmetricDecryptCipher</a><br/>
+<br/>
+<h1>AsymmetricDecryptCipher</h1>
+<code><span class="keyword">class </span><span class="identifier">AsymmetricDecryptCipher</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-concrete-cipher/index.html"><span class="identifier">ConcreteCipher</span></a><span class="symbol">, </span><a href="../-decrypt-cipher/index.html"><span class="identifier">DecryptCipher</span></a></code>
+<p>An <a href="../-decrypt-cipher/index.html">decrypting-only</a> cipher which uses an RSA-based <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">PrivateKey</a> for decryption.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">AsymmetricDecryptCipher</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricDecryptCipher$<init>(java.security.PrivateKey, com.github.rs3vans.krypto.KryptoProvider)/key">key</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a><span class="symbol">, </span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricDecryptCipher$<init>(java.security.PrivateKey, com.github.rs3vans.krypto.KryptoProvider)/provider">provider</span><span class="symbol">:</span>&nbsp;<a href="../-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a>&nbsp;<span class="symbol">=</span>&nbsp;KryptoProvider.defaultInstance<span class="symbol">)</span></code>
+<p>An <a href="../-decrypt-cipher/index.html">decrypting-only</a> cipher which uses an RSA-based <a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html">PrivateKey</a> for decryption.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="jdk-cipher.html">jdkCipher</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">jdkCipher</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/Cipher.html"><span class="identifier">Cipher</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="key.html">key</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/security/PrivateKey.html"><span class="identifier">PrivateKey</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="provider.html">provider</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">provider</span><span class="symbol">: </span><a href="../-krypto-provider/index.html"><span class="identifier">KryptoProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-concrete-cipher/algorithm.html">algorithm</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">algorithm</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="../-concrete-cipher/block-size.html">blockSize</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">blockSize</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="decrypt.html">decrypt</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decrypt</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.AsymmetricDecryptCipher$decrypt(com.github.rs3vans.krypto.Encrypted)/encrypted">encrypted</span><span class="symbol">:</span>&nbsp;<a href="../-encrypted/index.html"><span class="identifier">Encrypted</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-decrypted/index.html"><span class="identifier">Decrypted</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../-concrete-cipher/with-cipher.html">withCipher</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">X</span><span class="symbol">&gt;</span> <span class="identifier">withCipher</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.ConcreteCipher$withCipher(kotlin.Function1((javax.crypto.Cipher, com.github.rs3vans.krypto.ConcreteCipher.withCipher.X)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="http://docs.oracle.com/javase/6/docs/api/javax/crypto/Cipher.html"><span class="identifier">Cipher</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">X</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">X</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

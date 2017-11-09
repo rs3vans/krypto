@@ -1,5 +1,7 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 buildscript {
-    ext.kotlin_version = '1.0.5-2'
+    ext.kotlin_version = '1.1.51'
     ext.dokka_version = '0.9.10'
     ext.bintray_version = '1.7.3'
 
@@ -21,16 +23,18 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group 'com.github.rs3vans.krypto'
-version '1.1.0'
+version '2.0.0'
 
 repositories {
     jcenter()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 
-    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-core:1.3'
+    testCompile 'junit:junit:4.2'
+    testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
 
 dokka {
@@ -59,12 +63,16 @@ bintray {
     }
 }
 
-task dokkaDoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3'
+}
+
+task dokkaDoc(type: DokkaTask) {
     outputFormat = 'html'
     outputDirectory = "docs"
 }
 
-task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+task dokkaJavadoc(type: DokkaTask) {
     outputFormat = 'javadoc'
     outputDirectory = "$buildDir/javadoc"
 }

@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DigestBuilder - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">DigestBuilder</a><br/>
+<br/>
+<h1>DigestBuilder</h1>
+<code><span class="keyword">interface </span><span class="identifier">DigestBuilder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A builder-style contract for digesting a message.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="digest.html">digest</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">digest</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-bytes/index.html"><span class="identifier">Bytes</span></a></code>
+<p>Create a <a href="../-bytes/index.html">Bytes</a> from the digested data contained in this DigestBuilder so far.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="update.html">update</a></td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">update</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.DigestBuilder$update(com.github.rs3vans.krypto.Bytes)/bytes">bytes</span><span class="symbol">:</span>&nbsp;<a href="../-bytes/index.html"><span class="identifier">Bytes</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">DigestBuilder</span></code>
+<p>Update the current digest with the given <a href="../-bytes/index.html">Bytes</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

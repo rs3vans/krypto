@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Bytes - </title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">com.github.rs3vans.krypto</a>&nbsp;/&nbsp;<a href=".">Bytes</a><br/>
+<br/>
+<h1>Bytes</h1>
+<code><span class="keyword">class </span><span class="identifier">Bytes</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Any</span></code>
+<p>A class that wraps a <a href="#">ByteArray</a>, providing ease-of-use and additional functionality.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">Bytes</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes$<init>(kotlin.ByteArray)/byteArray">byteArray</span><span class="symbol">:</span>&nbsp;<span class="identifier">ByteArray</span><span class="symbol">)</span></code>
+<p>A class that wraps a <a href="#">ByteArray</a>, providing ease-of-use and additional functionality.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="byte-array.html">byteArray</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">byteArray</span><span class="symbol">: </span><span class="identifier">ByteArray</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="size.html">size</a></td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">size</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="copy.html">copy</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Bytes</span></code>
+<p>Creates a <emph>deep</emph> copy of this Bytes, where the new instance's <a href="byte-array.html">byteArray</a> is an entirely new <a href="#">ByteArray</a> with
+each byte copied by value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="copy-of-range.html">copyOfRange</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">copyOfRange</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes$copyOfRange(kotlin.ranges.IntRange)/range">range</span><span class="symbol">:</span>&nbsp;<span class="identifier">IntRange</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Bytes</span></code>
+<p>Creates a <emph>deep</emph> copy of this Bytes, where the new instance's <a href="byte-array.html">byteArray</a> is an entirely new <a href="#">ByteArray</a> with
+each byte within <a href="copy-of-range.html#com.github.rs3vans.krypto.Bytes$copyOfRange(kotlin.ranges.IntRange)/range">range</a> copied by value.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="deserialize-to-object.html">deserializeToObject</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html"><span class="identifier">Serializable</span></a><span class="symbol">&gt;</span> <span class="identifier">deserializeToObject</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code>
+<p>Convert a Bytes into a <a href="#">T</a> by deserializing it using an <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ObjectInputStream.html">ObjectInputStream</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="equals.html">equals</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">equals</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes$equals(kotlin.Any)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Any</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="hash-code.html">hashCode</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">hashCode</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+<tr>
+<td>
+<a href="plus.html">plus</a></td>
+<td>
+<code><span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">plus</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes$plus(com.github.rs3vans.krypto.Bytes)/other">other</span><span class="symbol">:</span>&nbsp;<span class="identifier">Bytes</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Bytes</span></code>
+<p>Create a new Bytes that is <a href="byte-array.html">byteArray</a> with <a href="plus.html#com.github.rs3vans.krypto.Bytes$plus(com.github.rs3vans.krypto.Bytes)/other">other.byteArray</a> appended directly after.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-base64-string.html">toBase64String</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toBase64String</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert a Bytes into a <a href="https://en.wikipedia.org/wiki/Base64">Base64-encoded</a> <a href="#">String</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-byte-buffer.html">toByteBuffer</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toByteBuffer</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html"><span class="identifier">ByteBuffer</span></a></code>
+<p>Convert a Bytes into a <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-decoded-string.html">toDecodedString</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toDecodedString</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes$toDecodedString(java.nio.charset.Charset)/charset">charset</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html"><span class="identifier">Charset</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Charsets.UTF_8<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert a Bytes into a String by decoding it using the given <a href="http://docs.oracle.com/javase/6/docs/api/java/nio/charset/Charset.html">Charset</a>, assuming it contains character data.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-hex-string.html">toHexString</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toHexString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Convert a Bytes into a Hex-encoded <a href="#">String</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-input-stream.html">toInputStream</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toInputStream</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html"><span class="identifier">InputStream</span></a></code>
+<p>Convert a Bytes into an <a href="http://docs.oracle.com/javase/6/docs/api/java/io/InputStream.html">InputStream</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="to-string.html">toString</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-d-e-f-a-u-l-t_-r-a-n-d-o-m_-b-y-t-e-s_-s-i-z-e.html">DEFAULT_RANDOM_BYTES_SIZE</a></td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">DEFAULT_RANDOM_BYTES_SIZE</span><span class="symbol">: </span><span class="identifier">Int</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="generate-random-bytes.html">generateRandomBytes</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">generateRandomBytes</span><span class="symbol">(</span><span class="identifier" id="com.github.rs3vans.krypto.Bytes.Companion$generateRandomBytes(kotlin.Int)/size">size</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span>&nbsp;<span class="symbol">=</span>&nbsp;DEFAULT_RANDOM_BYTES_SIZE<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Bytes</span></code>
+<p>Generate random Bytes of a given size.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
